@@ -1,0 +1,99 @@
+/* experiencia */
+body{
+    .body__experiencia {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.bg__experiencia {
+        width: 100% !important;
+        .bg__experienciaimg {
+            background-image: url("../media/bg__img.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%; 
+            height: 100% !important; 
+            z-index: -1;
+            position: absolute;
+            margin-right: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+        }  
+}
+
+.conteiner__experiencia {
+    margin-top: 15vh;
+    .conteiner__izquierdo{
+        background-color: rgb(20, 20, 20, 0.8);
+        border-width: 1px;
+        border-style: solid;
+        border-color: #000;
+        border-radius: 5px;
+        padding: 10px 20px;
+        .educacion {
+            h2 {
+            background-color: #57606f;
+            color: #eee;
+            font-weight: bold;
+            }
+            ul {
+                h4 {
+                    color: aliceblue;
+                }
+                li {
+                    p{
+                        color: #eee;
+                    }
+                }
+            }
+            h3 {
+                color: #eee;
+                background-color: #57606f;
+                
+            }
+        }
+    }
+    .conteiner__derecho {
+        background-color: rgb(20, 20, 20, 0.8);
+        border-width: 1px;
+        border-style: solid;
+        border-color: #000;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-left: 5px;
+        .experiencialaboral { 
+            h2 {
+            background-color: #57606f;
+            color: #eee;
+            font-weight: bold;
+            }
+            ul {
+                li {
+                    p {
+                        color: #eee;
+                    }
+                }
+                h4 {
+                    color: #eee;
+                }
+            }
+        }
+    }
+}
+    
+@media (max-width:991px) {
+    .conteiner__experiencia{
+        margin-top: 54px;
+    }
+}
+
+@media (max-width:576px) {
+    .conteiner__experiencia{
+        margin-top: 55px;
+        margin-bottom: 40px;
+    }
+}

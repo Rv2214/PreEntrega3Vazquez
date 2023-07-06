@@ -1,0 +1,33 @@
+body {
+    .conteiner__bodycontactame {
+        .bg_contactame {
+            background-image: url("../media/bg__img.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 100%; 
+            height: 100% !important; 
+            z-index: -1;
+            position: absolute;
+            margin-right: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+        }
+        .section__contactame {
+            .conteiner__sectioncontactame {
+                position: relative;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .bg__contactame{
+        display: none;
+    }
+    .conteiner__sectioncontactame {
+        margin-top: 100px;
+    }
+}

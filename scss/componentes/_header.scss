@@ -1,0 +1,93 @@
+/* header */
+.nav__principal{
+    height: auto;
+    width: 100%;
+    background: rgb(0,0,0, 0.8);
+    position: fixed;
+    z-index: 100;
+    margin-left: auto;
+    left: 0;
+    .nav__desplegable {
+        display: none;
+        top: -2;
+        left: 10px;
+    }
+    /* navigation buttons */
+    .nav__links {
+        display: inline;
+        float: right;
+        font-size: 18px;
+            a {
+                display: inline-block;
+                padding: 13px 10px 13px 10px;
+                text-decoration: none;
+                color: #efefef;
+                transition: transform 0.1s ease-in-out;
+            }
+            a:hover{
+                transform: scale(1.2);
+            }   
+    }
+    /* drop down menu check */
+    #nav-check{
+        display: none;
+    }
+} 
+
+@media (max-width:576px){
+    .nav__principal {
+        .nav__desplegable {
+            display: inline-block;
+            label {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                padding: 13px;
+                span {
+                    display: block;
+                    width: 25px;
+                    height: 10px;
+                    border-top: 2px solid #eee;
+                    margin-left: 10px;
+                }
+                span:not(:first-child) {
+                    display: none;
+                }
+            }
+            label:hover,.nav__principal  #nav-check:checked ~ .nav__desplegable > label {
+                cursor: pointer;
+                background-color: rgba(82, 80, 80, 0.1);
+                border-radius: 10%;
+            }
+        }
+        .nav__links {
+            left: 0;
+            position: fixed;
+            display: block;
+            width: 100%;
+            background-color: #333;
+            height: 0px;
+            transition: all 0.3s ease-in;
+            overflow-y: hidden;
+            top: 50px;
+            z-index: 100;
+            a {
+                display: block;
+                width: 100%;
+                transform: none !important;
+            }
+            a:hover {
+                background-color: #f2f2f2; 
+                color: #000;
+            }
+        }
+        #nav-check:not(:checked) ~ .nav__links {
+            height: 0px;
+        }
+        #nav-check:checked ~ .nav__links {
+            height: calc(100vh - 50px);
+            overflow-y: auto;
+        }
+    }
+}
+

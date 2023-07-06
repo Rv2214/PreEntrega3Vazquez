@@ -1,0 +1,31 @@
+@import '../abstract/variables';
+/* footer */
+.footer__principal {
+    background: rgb(0,0,0, 0.8);
+    color: #efefef;
+    text-align: center; 
+    margin-left: auto;
+    height: 5vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    /* buttons social networks */
+    .buttons__nav {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+            a {
+            color: #efefef;
+            }
+            a:hover {
+            color: rgba(255, 255, 255, 0.7);
+            }
+        }
+}
