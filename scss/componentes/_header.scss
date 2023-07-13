@@ -1,12 +1,10 @@
 /* header */
 .nav__principal{
+    @extend %orden;
     height: auto;
-    width: 100%;
-    background: rgb(0,0,0, 0.8);
-    position: fixed;
-    z-index: 100;
     margin-left: auto;
-    left: 0;
+    background-color: $color-bghf;
+    position: fixed;
     .nav__desplegable {
         display: none;
         top: -2;

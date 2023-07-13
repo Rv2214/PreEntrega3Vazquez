@@ -32,12 +32,9 @@ body .icon__barras {
 /* header */
 .nav__principal {
   height: auto;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  z-index: 100;
   margin-left: auto;
-  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
   /* navigation buttons */
   /* drop down menu check */
 }
@@ -125,7 +122,6 @@ body .icon__barras {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100% !important;
   z-index: -1;
   position: absolute;
   margin-right: 0;
@@ -141,60 +137,36 @@ body .icon__barras {
 .conteiner__bodyinicio .conteiner__maininicio main {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
-  position: relative; /* Permite utilizar position absolute en el elemento hijo */
-  transition: transform 0.3s ease; /* Transición suave de 0.3 segundos */
+  position: relative;
+  transition: transform 0.3s ease;
 }
 .conteiner__bodyinicio .conteiner__maininicio h1 {
-  color: rgba(255, 235, 205, 0.904); /* Color blanco para el título */
-  font-size: 34px; /* Tamaño de fuente adecuado */
-  font-weight: 300; /* Fuente en negrita */
-  letter-spacing: 1px; /* Espaciado entre letras */
+  color: rgba(255, 235, 205, 0.904);
+  font-size: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
   text-shadow: 0.5px #000;
 }
 .conteiner__bodyinicio .conteiner__maininicio h2 {
-  color: rgba(255, 255, 255, 0.904); /* Color blanco para el título */
-  font-size: 24px; /* Tamaño de fuente adecuado */
-  font-weight: 200; /* Fuente en negrita */
-  letter-spacing: 1px; /* Espaciado entre letras */
+  color: rgba(255, 255, 255, 0.904);
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: 1px;
   text-shadow: 1px 1px 1px 1px 1px 1px #000;
 }
 .conteiner__bodyinicio main:hover {
   transform: translate(0%, 50%) scale(1.5);
 }
 
-/*.bg__experiencia {
-    width: 100% !important;
-    .bg__experienciaimg {
-        background-image: url("../media/bg__img.jpg");
-        background-size: cover;
-        background-position: center;
-        width: 100%; 
-        height: 100% !important; 
-        z-index: -1;
-        position: absolute;
-        margin-right: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-repeat: no-repeat;
-    }  
-}
-background-image: url("../media/bg__img.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-width: 100%;
-height: 90vh;*/
 /* footer */
 .footer__principal {
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #efefef;
   text-align: center;
   margin-left: auto;
-  height: 5vh;
+  height: 6%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -205,6 +177,7 @@ height: 90vh;*/
   list-style-type: none;
   padding: 0;
   margin: 0;
+  margin-top: 5px;
 }
 .footer__principal .buttons__nav li {
   display: inline-block;
@@ -217,6 +190,24 @@ height: 90vh;*/
   color: rgba(255, 255, 255, 0.7);
 }
 
+@media (max-width: 768px) {
+  .footer__principal {
+    margin-left: 0;
+    bottom: 0;
+  }
+  .footer__principal .buttons__nav {
+    margin-left: 15%;
+  }
+}
+@media (max-width: 576px) {
+  .footer__principal {
+    margin-left: 0;
+    bottom: 0;
+  }
+  .footer__principal .buttons__nav {
+    margin-left: 15%;
+  }
+}
 body {
   display: flex;
   align-items: center;
@@ -274,6 +265,9 @@ body .main__sobremi div .img__sobremi img {
     margin-left: 20px;
     margin-top: 5px;
   }
+  .conteiner__bodysobremi .footer__principal {
+    position: relative;
+  }
 }
 /* galeria */
 .body__gallery {
@@ -326,6 +320,81 @@ body .main__sobremi div .img__sobremi img {
   border: 5px solid blanchedalmond;
 }
 
+#carrousel {
+  display: none;
+}
+
+/* carrousel mobile */
+@media (max-width: 576px) {
+  .conteiner__gallery {
+    display: none;
+  }
+  #carrousel {
+    display: block;
+    width: 100%;
+    height: 400px;
+    top: 150px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 600px;
+    height: 400px;
+  }
+  .carrousel-picto {
+    position: absolute;
+    left: 45%;
+    bottom: 50px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .carrousel-picto li {
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 6px;
+    cursor: pointer;
+  }
+  .carrousel-picto span {
+    display: block;
+    color: transparent;
+  }
+  .carrousel-picto li:hover, .carrousel-picto li.active {
+    background-color: #2980b9;
+  }
+  #carrousel-nav .prev {
+    width: 54px;
+    height: 54px;
+    background-image: url("https://dummyimage.com/54/ff0000/ffffff");
+    top: 45%;
+    left: 0;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  #carrousel-nav .next {
+    width: 54px;
+    height: 54px;
+    background-image: url("https://dummyimage.com/54/ff0000/ffffff");
+    top: 45%;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  #carrousel-nav .prev:hover, #carrousel-nav .next:hover {
+    opacity: 1;
+  }
+  #carrousel-nav .prev:hover, #carrousel-nav .next:hover {
+    opacity: 1;
+  }
+}
 /* experiencia */
 body .body__experiencia {
   height: 100%;
@@ -384,7 +453,7 @@ body .body__experiencia {
   border-color: #000;
   border-radius: 5px;
   padding: 10px 20px;
-  margin-left: 5px;
+  margin-left: 0px;
 }
 .conteiner__experiencia .conteiner__derecho .experiencialaboral h2 {
   background-color: #57606f;
@@ -399,17 +468,19 @@ body .body__experiencia {
 }
 
 @media (max-width: 991px) {
-  .conteiner__experiencia {
+  .body__experiencia .conteiner__experiencia {
     margin-top: 54px;
   }
 }
 @media (max-width: 576px) {
-  .conteiner__experiencia {
+  .body__experiencia .footer__principal {
+    position: relative;
+  }
+  .body__experiencia .conteiner__experiencia {
     margin-top: 55px;
-    margin-bottom: 40px;
   }
 }
-body .conteiner__bodycontactame .bg_contactame {
+body .conteiner__bodycontactame .bg__contactame {
   background-image: url("../media/bg__img.jpg");
   background-size: cover;
   background-position: center;
@@ -426,16 +497,31 @@ body .conteiner__bodycontactame .bg_contactame {
 }
 body .conteiner__bodycontactame .section__contactame .conteiner__sectioncontactame {
   position: relative;
+  margin-top: 45%;
 }
 
 @media (max-width: 768px) {
-  .bg__contactame {
-    display: none;
+  body .conteiner__sectioncontactame {
+    margin-top: 50%;
   }
-  .conteiner__sectioncontactame {
-    margin-top: 100px;
+  body .conteiner__sectioncontactame .footer__principal {
+    position: fixed;
   }
 }
+@media (max-width: 576px) {
+  body .conteiner__sectioncontactame {
+    margin-top: 50%;
+  }
+  body .conteiner__sectioncontactame .footer__principal {
+    position: sticky;
+  }
+}
+.nav__principal, .footer__principal {
+  width: 100%;
+  left: 0;
+  z-index: 100;
+}
+
 @media (max-width: 576px) {
   /* gallery */
   .body__gallery {

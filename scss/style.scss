@@ -1,3 +1,4 @@
+@import './abstract/colors';
 @import './componentes/allpages';
 @import './componentes/header';
 @import './componentes/inicio';
@@ -6,6 +7,9 @@
 @import './componentes/galeria';
 @import './componentes/experiencia';
 @import './componentes/contactame';
+@import './abstract/extend';
+@import './abstract/maps';
+@import './abstract/variables';
 
 
 @media (max-width:576px){

@@ -1,6 +1,6 @@
 body {
     .conteiner__bodycontactame {
-        .bg_contactame {
+        .bg__contactame {
             background-image: url("../media/bg__img.jpg");
             background-size: cover;
             background-position: center;
@@ -18,16 +18,31 @@ body {
         .section__contactame {
             .conteiner__sectioncontactame {
                 position: relative;
+                margin-top: 45%;
             }
         }
     }
 }
 
 @media (max-width:768px) {
-    .bg__contactame{
-        display: none;
-    }
-    .conteiner__sectioncontactame {
-        margin-top: 100px;
-    }
+    body {
+        .conteiner__sectioncontactame {
+            margin-top: 50%;
+            .footer__principal {
+                position: fixed;
+            }
+        }
+    }   
+}
+
+
+@media (max-width:576px){
+    body {
+        .conteiner__sectioncontactame {
+            margin-top: 50%;
+            .footer__principal {
+                position: sticky;
+            }
+        }
+    }   
 }

@@ -5,7 +5,6 @@
         background-size: cover;
         background-position: center;
         width: 100%; 
-        height: 100% !important; 
         z-index: -1;
         position: absolute;
         margin-right: 0;
@@ -20,21 +19,21 @@
         main {
             background-color: rgba(0,0,0, 0.7);
             border-radius: 10px;
-            position: relative; /* Permite utilizar position absolute en el elemento hijo */
-            transition: transform 0.3s ease; /* Transición suave de 0.3 segundos */
+            position: relative; 
+            transition: transform 0.3s ease; 
         }
             h1 {
-                color: rgba(255, 235, 205, 0.904); /* Color blanco para el título */
-                font-size: 34px; /* Tamaño de fuente adecuado */
-                font-weight: 300; /* Fuente en negrita */
-                letter-spacing: 1px; /* Espaciado entre letras */
+                color: rgba(255, 235, 205, 0.904); 
+                font-size: 34px; 
+                font-weight: 300;
+                letter-spacing: 1px; 
                 text-shadow: 0.5px #000;
             }
             h2 {
-                color: rgba(255, 255, 255, 0.904); /* Color blanco para el título */
-                font-size: 24px; /* Tamaño de fuente adecuado */
-                font-weight: 200; /* Fuente en negrita */
-                letter-spacing: 1px; /* Espaciado entre letras */
+                color: rgba(255, 255, 255, 0.904); 
+                font-size: 24px; 
+                font-weight: 200; 
+                letter-spacing: 1px; 
                 text-shadow: 1px 1px 1px 1px 1px 1px #000;
             }
         }
@@ -44,27 +43,3 @@
     }       
 
 
-/*.bg__experiencia {
-    width: 100% !important;
-    .bg__experienciaimg {
-        background-image: url("../media/bg__img.jpg");
-        background-size: cover;
-        background-position: center;
-        width: 100%; 
-        height: 100% !important; 
-        z-index: -1;
-        position: absolute;
-        margin-right: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background-repeat: no-repeat;
-    }  
-}
-background-image: url("../media/bg__img.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-width: 100%;
-height: 90vh;*/

@@ -64,7 +64,7 @@ body{
         border-color: #000;
         border-radius: 5px;
         padding: 10px 20px;
-        margin-left: 5px;
+        margin-left: 0px;
         .experiencialaboral { 
             h2 {
             background-color: #57606f;
@@ -86,14 +86,23 @@ body{
 }
     
 @media (max-width:991px) {
-    .conteiner__experiencia{
-        margin-top: 54px;
+    .body__experiencia{
+        .conteiner__experiencia{
+            margin-top: 54px;
+        }
     }
+    
+
 }
 
 @media (max-width:576px) {
-    .conteiner__experiencia{
-        margin-top: 55px;
-        margin-bottom: 40px;
+    .body__experiencia{
+        .footer__principal {
+            position: relative;
+            }
+        .conteiner__experiencia{
+            margin-top: 55px; 
+        }
     }
 }
+
