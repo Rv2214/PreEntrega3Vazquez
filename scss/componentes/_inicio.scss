@@ -36,7 +36,7 @@
           opacity: 1;
         }
     } 
-    
+    /* sticker img inicio */
     .sticker___conteiner {
         bottom: 0;
         right: 0;
@@ -45,10 +45,11 @@
         height: auto; 
         animation: slideIn 1s ease-in-out, fadeOut 2s ease-in-out; 
     }  
+    /* img sticker incio */
     .sticker___conteiner{
       img{
         max-width: 100%;
-        height: auto;
+        height: 80vh;
       }
     }
 

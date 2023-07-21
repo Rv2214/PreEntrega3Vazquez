@@ -1,22 +1,21 @@
 /* animations */
 @keyframes slideFadeFromLeft {
     0% {
-      transform: translateX(-100%);
-      opacity: 0;
+    transform: translateX(-100%);
+    opacity: 0;
     }
     100% {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
     }
-  }
+}
 @keyframes slideFadeFromRight {
     0% {
-      transform: translateX(100%); /* Inicia la imagen fuera de la pantalla, en el extremo derecho */
+    transform: translateX(100%); 
         opacity: 0;
     }
     100% {
-      transform: translateX(0); /* La imagen se desliza hacia la posición original */
-        opacity: 1;
+    transform: translateX(0); 
     }
 }
 
@@ -26,6 +25,13 @@ body{
     .body__experiencia {
         height: 100%;
         width: 100%;
+        .footer__principal{
+            position: absolute;
+            height: auto;
+            bottom: 0;
+            width: 100%;
+            margin-left: 0;
+        }
     }
 }
 
@@ -34,7 +40,7 @@ body{
     background-size: cover;
     background-position: center;
     width: 100%; 
-    height: 100% !important; 
+    height: 100%; 
     z-index: -1;
     position: absolute;
     margin-right: 0;
@@ -125,16 +131,10 @@ body{
             background-repeat: repeat-y;
             }
         .footer__principal {
-            position: relative;
+            position: relative !important;
         }
         
     }
-    /* .body__experiencia{
-        .bg__img{
-            position: fixed;
-            background-attachment: fixed;
-            background-repeat: repeat-y;
-        }  */
         .conteiner__experiencia{
             margin-top: 55px; 
         }

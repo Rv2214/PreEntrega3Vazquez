@@ -21,7 +21,7 @@ body {
         margin-right: 25px;
     }
     .fa:hover{
-        transform: scale(1.2);
+        transform: scale(1);
     }
     .icon__barras {
         position: absolute;
@@ -32,30 +32,10 @@ body {
     .footer__principal{
         margin-left: 0;
         margin-right: auto;
-        position: absolute;
-        height: 6%;
-    }
-}
-@media (max-width:766px){
-    .body__sobremi{
-        .footer__principal{
-            position: relative;
-            height: auto;
-            bottom: 0;
-            width: 100%;
-            margin-left: 0;
-            }
-        }
-}
-
-@media (max-width:576px){
-.body__sobremi{
-    .footer__principal{
-        position: relative;
-        height: auto;
         bottom: 0;
         width: 100%;
+        height: auto;
         margin-left: 0;
-        }
     }
 }
+

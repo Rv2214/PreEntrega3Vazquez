@@ -1,13 +1,13 @@
 @keyframes slideFadeFromLeft {
     0% {
-      transform: translateX(-100%);
-      opacity: 0;
+    transform: translateX(-100%);
+    opacity: 0;
     }
     100% {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
     }
-  }
+}
 
 body {
     .conteiner__bodycontactame {
@@ -26,11 +26,18 @@ body {
             bottom: 0;
             background-repeat: no-repeat;
         }
+        .footer__principal{
+            position: absolute;
+            height: auto;
+            bottom: 0;
+            width: 100%;
+            margin-left: 0;
+        }
         .section__contactame {
             animation: slideFadeFromLeft 1s ease-in-out;
             .conteiner__sectioncontactame {
                 position: relative;
-                margin-top: 45%;
+                margin-top: 45%;  
             }
         }
     }
@@ -59,3 +66,4 @@ body {
         }
     }   
 }
+
