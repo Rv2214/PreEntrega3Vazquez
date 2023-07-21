@@ -2,12 +2,9 @@
 .footer__principal {
     @extend %orden;
     background-color: $color-bghf;
-    color: #efefef;
     text-align: center; 
     margin-left: auto;
-    height: 6%;
     width: 100%;
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -35,6 +32,7 @@
     .footer__principal {
         margin-left: 0;
         bottom: 0;
+        height: auto !important;
         .buttons__nav {
             margin-left: 15%;
         }
@@ -47,6 +45,10 @@
     bottom: 0;
     .buttons__nav {
         margin-left: 15%;
+        margin-top: 0px;
+        .icons{
+            font-size: 30px !important;
+        }
     }
 }
 }

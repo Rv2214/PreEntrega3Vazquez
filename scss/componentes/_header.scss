@@ -83,7 +83,7 @@
             height: 0px;
         }
         #nav-check:checked ~ .nav__links {
-            height: calc(100vh - 50px);
+            height: calc(100vh - 150px);
             overflow-y: auto;
         }
     }

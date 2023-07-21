@@ -2,6 +2,9 @@
 .body__gallery {
     height: 100%;
     width: 100%;
+    .footer__principal{
+        position: relative;
+    }
 }
 
 .bg__galleryimg {
@@ -20,6 +23,15 @@
     background-repeat: no-repeat;
 }
 
+@keyframes fadeOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+} 
+
 .conteiner__gallery {
     position: relative;
     z-index: 10;
@@ -27,6 +39,7 @@
     height: 100% !important; 
     .conteiner__img {
         margin-top: 15vh;
+        animation: fadeOut 1.5s ease-in-out;
         .img__galeriaslot {
             position: relative;
             z-index: 100;
@@ -48,7 +61,7 @@
         }      
     }
 }    
-#carrousel {
+.carrousel__mobile {
     display: none;
     }
 
@@ -57,66 +70,92 @@
 .conteiner__gallery{
 display: none;
 }
-#carrousel {
+.body__gallery{
+    .footer__principal{
+        position: absolute;
+    }
+    .bg__galleryimg{
+        width: 100%;
+        height: auto;
+        position: absolute;
+    }
+}
+
+.carrousel__mobile {
     display: block;
-    width:100%;
-    height:400px;
-    top: 150px;
-    margin: 0 auto;
-    position:relative;
-    overflow:hidden;
-    }
-    
-    .slide {
-    position:absolute;
-    top:0px;
-    left:0px;
-    width:600px;
-    height:400px;
-    }
-    
-    .carrousel-picto{
-    position:absolute;
-    left:45%;
-    bottom:50px;
-    padding:0px;
-    margin:0px;
-    }
-    
-    .carrousel-picto li{
-    display:inline-block;
-    background-color:#ffffff;
-    border-radius:50%;
-    width:10px;
-    height:10px;
-    margin:6px;
-    cursor:pointer;
-    
-    }
-    .carrousel-picto span{display: block;color: transparent;}
-    .carrousel-picto li:hover, .carrousel-picto li.active{background-color:#2980b9;}
-    
-    #carrousel-nav .prev{
-    width:54px;
-    height:54px;
-    background-image:url('https://dummyimage.com/54/ff0000/ffffff');
-    top:45%;
-    left: 0;
-        position: absolute;
-    cursor:pointer;
-    opacity:0.8;
-    }
-    #carrousel-nav .next{
-    width:54px;
-    height:54px;
-    background-image:url('https://dummyimage.com/54/ff0000/ffffff');
-    top:45%;
-    right: 0;
-        position: absolute;
-    cursor:pointer;
-    opacity:0.8;
-    }
-    
-    #carrousel-nav .prev:hover,#carrousel-nav .next:hover {opacity: 1;}
-#carrousel-nav .prev:hover,#carrousel-nav .next:hover {opacity: 1;}
+}
+#slider{
+    position: relative;
+    overflow: hidden;
+    margin: 45% auto 0 auto;
+    border-radius: 4px;
+}
+#slider ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    list-style: none;
+}
+#slider ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+#slider ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+a.control_prev, a.control_next {
+    position: absolute;
+    top: 80%;
+    z-index: 100;
+    display: block;
+    padding: 4% 3%;
+    width: auto;
+    height: auto;
+    background: #2a2a2a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+    opacity: 1;
+    transition: all 0.2s ease;
+}
+
+  a.control_prev {
+    left: 0; 
+    border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+    left: 100vw; 
+    transform: translateX(-100%); 
+    /*right: 50%; 
+    transform: translateX(150%);
+    border-radius: 0 2px 2px 0;*/
+}
+
+.autoplay_option {
+    position: relative;
+    margin: 10px auto;
+    width: 180px;
+    font-size: 26px;
+}
 }

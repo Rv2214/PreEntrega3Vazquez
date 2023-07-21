@@ -1,3 +1,14 @@
+@keyframes slideFadeFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
 body {
     .conteiner__bodycontactame {
         .bg__contactame {
@@ -16,6 +27,7 @@ body {
             background-repeat: no-repeat;
         }
         .section__contactame {
+            animation: slideFadeFromLeft 1s ease-in-out;
             .conteiner__sectioncontactame {
                 position: relative;
                 margin-top: 45%;
@@ -24,12 +36,13 @@ body {
     }
 }
 
+
 @media (max-width:768px) {
     body {
         .conteiner__sectioncontactame {
             margin-top: 50%;
             .footer__principal {
-                position: fixed;
+                position: absolute;
             }
         }
     }   
@@ -41,7 +54,7 @@ body {
         .conteiner__sectioncontactame {
             margin-top: 50%;
             .footer__principal {
-                position: sticky;
+                position: absolute;
             }
         }
     }   
